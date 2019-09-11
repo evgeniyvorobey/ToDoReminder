@@ -1,0 +1,18 @@
+.input-container {
+
+    .add-item-form { display: flex; flex-wrap: wrap; }
+
+	input{ padding: 15px 10px; margin: 0; width: 100%; font-size: 14px; box-sizing: border-box; 
+        color: currentColor; outline: none; border-radius: 0; border: 1px solid #dfdfdf; 
+        transition: .15s;
+        
+        &.type-text{ flex: 2; }
+
+        &.type-number{ flex: 1; }
+
+	
+		&:active,&:focus { border: 1px solid #a7a7a7; }
+		
+	}
+
+}

@@ -1,0 +1,44 @@
+.wrapper {
+    position: relative; height: 140px; background: #fff;
+}
+
+.loader-wrapper {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer;
+}
+
+.loader-circle { width: 120px; height: 120px; display: inline-block; z-index: 99; position: relative; transition:
+    .3s ease; }
+
+.loader-circle-inner { width: 100%; height: 100%; animation: rotate 3.5s linear infinite;
+    transform-origin: center center; margin: auto; }
+
+.path { stroke-dasharray: 1, 100; stroke-dashoffset: 0px; stroke-linecap: square; stroke: rgba(85, 89, 144, 0.51); 
+    animation: dash 1.7s linear infinite; transition: .3s stroke ease; }
+
+@keyframes rotate{
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes dash{
+    0% {
+        stroke-dasharray: 5, 100;
+    }
+    25% {
+        stroke-dasharray: 30, 100;
+        stroke-dashoffset: -30px;
+    }
+    50% {
+        stroke-dasharray: 45, 100;
+        stroke-dashoffset: -45px;
+    }
+    75% {
+        stroke-dasharray: 50, 100;
+        stroke-dashoffset: -50px;
+    }
+    100% {
+        stroke-dasharray: 90, 100;
+        stroke-dashoffset: -90px;
+    }
+}

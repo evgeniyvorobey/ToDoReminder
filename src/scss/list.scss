@@ -1,0 +1,33 @@
+.list { font-family: 'Roboto', sans-serif; color: #4c4c4c; max-width: 400px;
+	margin: 0 auto; box-shadow: 0 0 2px #4c4c4c; border-radius: 0px;}
+
+.list-item { padding: 15px 10px; border-bottom: 1px solid #dfdfdf; display: flex;
+	justify-content: space-between; transition: .08s linear; 
+	position: relative;  align-items: center;
+
+	.text { font-weight: 300; flex: 1 1 0; }
+
+	.time-to-end { margin-right: 10px; }
+
+	.progress-line { position: absolute; bottom: 0; left: 0; height: 100%; width: 0%;
+		 background: #2ea02410; }
+
+	&:hover{ background: #f7f7f7; }
+}
+
+@keyframes fade {
+	0% { background: #72cffa; }
+}
+
+@keyframes timeLine{
+	0% {width: 100%}
+}
+
+.button-close { width: 16px; height: 16px; cursor: pointer; transition: .1s linear;
+	 color: #adadad; opacity: .5;
+
+	&:hover { color: #000000; opacity: 1; }
+
+	svg {fill: currentColor;}
+
+}
